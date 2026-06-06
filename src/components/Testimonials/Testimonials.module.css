@@ -1,0 +1,59 @@
+.section {
+  padding: 6rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+
+.quote {
+  font-size: 2rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.text {
+  font-size: 0.9rem;
+  color: var(--text2);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.author { display: flex; align-items: center; gap: 12px; }
+
+.avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  font-family: var(--font-display);
+  flex-shrink: 0;
+}
+.avatarAccent { background: rgba(212,240,65,0.1); color: var(--accent); }
+.avatarBlue   { background: rgba(77,159,255,0.1); color: #4d9fff; }
+.avatarPurple { background: rgba(181,123,255,0.1); color: #b57bff; }
+
+.name { font-size: 0.875rem; font-weight: 600; }
+.role { font-size: 0.75rem; color: var(--text3); }
+
+@media (max-width: 900px) {
+  .section { padding: 4rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; }
+}

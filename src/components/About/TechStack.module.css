@@ -1,0 +1,133 @@
+.section {
+  padding: 6rem 0 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header {
+  max-width: 520px;
+}
+
+.title {
+  line-height: 1.1 !important;
+}
+
+.titleMuted {
+  color: var(--text2);
+  font-weight: 300;
+}
+
+.subtitle {
+  color: var(--text2);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;   /* lebih besar dari sebelumnya */
+  cursor: default;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(212,240,65,0.06) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardAccent {
+  background: rgba(212,240,65,0.06);
+  border-color: rgba(212,240,65,0.22);
+}
+
+.cardAccent .cardName {
+  color: var(--accent);
+}
+
+.cardInner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 28px;    /* dari 22px */
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: brightness(0.9);
+  transition: filter 0.2s;
+}
+
+.card:hover .icon {
+  filter: brightness(1.1);
+}
+
+.cardName {
+  font-size: 0.9rem;    /* dari 0.82rem */
+  font-weight: 500;
+  color: var(--text2);
+  transition: color 0.2s;
+  flex: 1;
+}
+
+.card:hover .cardName {
+  color: var(--accent);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(212,240,65,0.5);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--border2) 30%, var(--border2) 70%, transparent 100%);
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+  }
+
+  .card {
+    padding: 14px 16px;
+  }
+}
