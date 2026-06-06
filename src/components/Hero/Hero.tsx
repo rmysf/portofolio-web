@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './Hero.module.css';
-import { stats } from '../../data';
+import { /* hapus stats, sisakan yang lain */ } from '../../data';
 import Lanyard from './Lanyard';
 
 const Hero: React.FC = () => {
