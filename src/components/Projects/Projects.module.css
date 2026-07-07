@@ -56,6 +56,16 @@
 }
 .card:hover .thumbBg { transform: scale(1.05); }
 
+.thumbImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.card:hover .thumbImg { transform: scale(1.05); }
+
 .thumbText {
   position: relative;
   z-index: 1;
@@ -101,20 +111,6 @@
 .cardFeatured .title { font-size: 1.6rem; margin-bottom: 0.75rem; }
 
 .desc { font-size: 0.875rem; color: var(--text2); line-height: 1.7; font-weight: 300; }
-
-.link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 1.25rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--accent);
-  font-family: var(--font-display);
-  letter-spacing: 0.03em;
-}
-.link::after { content: '→'; transition: transform 0.2s; display: inline-block; }
-.card:hover .link::after { transform: translateX(4px); }
 
 @media (max-width: 768px) {
   .section { padding: 4rem 1.5rem; }

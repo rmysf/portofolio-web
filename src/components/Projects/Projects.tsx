@@ -11,27 +11,33 @@ const tagClass: Record<string, string> = {
 };
 
 const Projects: React.FC = () => (
-  <section className={styles.section} id="proyek">
+  <section className={styles.section} id="project">
     <div className={styles.inner}>
       <div className={`${styles.header} reveal`}>
-        <div className="section-tag">Proyek</div>
-        <h2 className="section-title">Karya Pilihan</h2>
-        <p className="section-desc">
-          Beberapa proyek yang paling saya banggakan dari ide awal hingga
-          produk yang digunakan ribuan pengguna.
-        </p>
+        <div className="section-tag">Project</div>
+        <h2 className="section-title">Some Things I've Built</h2>
       </div>
 
       <div className={styles.grid}>
         {projects.map((p, i) => (
-          <a
+          <div
             key={p.title}
-            href={p.href}
             className={`${styles.card} ${p.featured ? styles.cardFeatured : ''} reveal reveal-delay-${i}`}
           >
             <div className={styles.thumb}>
-              <div className={`${styles.thumbBg} ${p.bgClass}`} />
-              <div className={styles.thumbText}>{p.initials}</div>
+              {p.image ? (
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className={styles.thumbImg}
+                  loading="lazy"
+                />
+              ) : (
+                <>
+                  <div className={`${styles.thumbBg} ${p.bgClass}`} />
+                  <div className={styles.thumbText}>{p.initials}</div>
+                </>
+              )}
             </div>
             <div className={styles.info}>
               <div className={styles.tags}>
@@ -43,9 +49,8 @@ const Projects: React.FC = () => (
               </div>
               <div className={styles.title}>{p.title}</div>
               <p className={styles.desc}>{p.description}</p>
-              <div className={styles.link}>Lihat Proyek</div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>

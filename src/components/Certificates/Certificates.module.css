@@ -194,3 +194,22 @@
   border-radius: var(--radius);
   object-fit: contain;
 }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .section { padding: 4rem 1rem 3rem; }
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .certTitle { font-size: 0.7rem; }
+  .issuer { font-size: 0.65rem; }
+  .pagination { gap: 1rem; }
+  .navBtn { padding: 0.45rem 1rem; font-size: 0.75rem; }
+}
+
+@media (max-width: 380px) {
+  .grid { grid-template-columns: 1fr; }
+  .modal { max-width: 94vw; }
+  .close { top: -2.2rem; font-size: 1.1rem; }
+}

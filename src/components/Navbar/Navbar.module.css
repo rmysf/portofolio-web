@@ -68,7 +68,19 @@
 .links a:hover::after {
   transform: scaleX(1);
 }
+.links a.active {
+  color: var(--text);
+  font-weight: 600;
+}
 
+.links a.active::after {
+  transform: scaleX(1);
+}
+
+.drawerLink.active {
+  color: var(--text);
+  font-weight: 600;
+}
 /* CTA */
 .cta {
   background: var(--accent);

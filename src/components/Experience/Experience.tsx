@@ -3,13 +3,13 @@ import styles from './Experience.module.css';
 import { experiences } from '../../data';
 
 const Experience: React.FC = () => (
-  <section className={styles.section} id="pengalaman">
+  <section className={styles.section} id="experience">
     <div className={styles.inner}>
       <div className={`${styles.header} reveal`}>
-        <div className="section-tag">Pengalaman</div>
-        <h2 className="section-title">Perjalanan Karir</h2>
+        <div className="section-tag">Experience</div>
+        <h2 className="section-title">Career Journey</h2>
         <p className="section-desc">
-          Pengalaman organisasi dan kegiatan yang membentuk kemampuan kolaborasi dan dokumentasi saya.
+          Organizational experience and activities that shaped my collaboration and documentation skills.
         </p>
       </div>
 

@@ -9,7 +9,6 @@ import TechStack from './components/About/TechStack';
 import Projects from './components/Projects/Projects';
 import Certificates from './components/Certificates/Certificates';
 import Experience from './components/Experience/Experience';
-import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
         <Projects />
         <Certificates />
         <Experience />
-        <Contact />
       </main>
       <Footer />
     </>

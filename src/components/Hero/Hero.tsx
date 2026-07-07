@@ -10,11 +10,11 @@ const Hero: React.FC = () => {
     <>
       <div className={styles.bg} />
       <div className={styles.grid} />
-      <section className={styles.hero} id="beranda">
+      <section className={styles.hero} id="home">
 
         <div className={styles.threeCol}>
 
-          {/* LEFT — nama */}
+          {/* LEFT — name */}
           <div className={styles.leftCol}>
             <h1 className={styles.title}>
               Mohammad<br />
@@ -23,11 +23,8 @@ const Hero: React.FC = () => {
             </h1>
 
             <div className={styles.actions}>
-              <a href="#proyek" className={styles.btnPrimary}>
-                Lihat Proyek →
-              </a>
-              <a href="#kontak" className={styles.btnSecondary}>
-                Hubungi Saya
+              <a href="#project" className={styles.btnPrimary}>
+                View Projects →
               </a>
             </div>
           </div>
@@ -37,12 +34,13 @@ const Hero: React.FC = () => {
               <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]}/>
           </div>
 
-          {/* RIGHT — deskripsi */}
+          {/* RIGHT — description */}
           <div className={styles.rightCol}>
             <p className={styles.desc}>
-              Halo, saya seorang Full Stack Developer &amp; UI Designer
-              berbasis di Jakarta. Saya mengubah ide menjadi produk digital
-              yang fungsional dan indah.
+              Hi, I'm a Front-End Developer (Web &amp; Mobile).
+              I focus on building apps and website with Flutter and Flask
+              from UI/UX design in Figma, basic backend with REST API and MySQL,
+              to AI integrations like CNN, YOLO, and OCR.
             </p>
           </div>
 

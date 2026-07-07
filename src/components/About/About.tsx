@@ -1,30 +1,44 @@
 import React from 'react';
 import styles from './About.module.css';
+import ProfileCard from '../ProfileCard/ProfileCard';
+import avatarPhoto from '../../images/Rama.png'; // ganti sesuai nama file fotomu
 
 const About: React.FC = () => (
-  <section className={styles.section} id="tentang">
+  <section className={styles.section} id="about">
     <div className={styles.grid}>
       <div className={`${styles.imgWrap} reveal`}>
-        <div className={styles.imgPlaceholder}>
-          <div className={styles.avatar}>AP</div>
-          <div className={styles.avatarName}>Arya Pratama</div>
-          <div className={styles.avatarRole}>Full Stack Developer</div>
-        </div>
-        <div className={`${styles.floatTag} ${styles.tagLocation}`}>📍 Jakarta, Indonesia</div>
-        <div className={`${styles.floatTag} ${styles.tagExp}`}>⚡ 5 Tahun Pengalaman</div>
+        <ProfileCard
+          name="Mohammad Rama Yusuf"
+          title="Front-End Developer (Web & Mobile)"
+          handle="ramayusuf"
+          status="Online"
+          contactText="Contact Me"
+          avatarUrl={avatarPhoto}
+          showUserInfo={false}
+          enableTilt={true}
+          enableMobileTilt
+          onContactClick={() => console.log('Contact clicked')}
+          behindGlowColor="rgba(125, 190, 255, 0.67)"
+          behindGlowEnabled
+          innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+        />
       </div>
 
       <div className={`${styles.text} reveal reveal-delay-1`}>
-        <div className="section-tag">Tentang Saya</div>
-        <h2 className="section-title">Kode yang Bersih,<br />Desain yang Bermakna</h2>
+        <div className="section-tag">About Me</div>
+        <h2 className="section-title">Curious, Driven,<br />Always Building</h2>
         <p>
-          Saya adalah seorang developer dengan passion di persimpangan antara engineering dan desain.
-          Dengan 5+ tahun pengalaman, saya telah membangun berbagai produk mulai dari startup tahap
-          awal hingga platform enterprise skala besar.
+          I'm a 6th-semester Informatics Engineering student focused on
+          Front-End Web and Mobile development using Flutter and frameworks
+          like Flask. I like designing the UI/UX flow in Figma first before
+          moving into code, so the final result truly matches user needs.
         </p>
         <p>
-          Saya percaya bahwa perangkat lunak yang baik bukan hanya soal kode yang bekerja — tapi
-          tentang pengalaman yang dirasakan pengguna setiap kali mereka berinteraksi dengannya.
+          Beyond front-end, I also have basic backend skills such as
+          building REST APIs and managing MySQL databases, along with
+          experience integrating AI like Deep Learning (CNN), YOLO, and OCR
+          into web and mobile apps. I'm also active on campus as a
+          documentation team coordinator.
         </p>
       </div>
     </div>

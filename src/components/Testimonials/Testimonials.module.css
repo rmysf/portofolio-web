@@ -1,4 +1,4 @@
-.section {
+/* .section {
   padding: 6rem 3rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -56,4 +56,4 @@
 @media (max-width: 900px) {
   .section { padding: 4rem 1.5rem; }
   .grid { grid-template-columns: 1fr; }
-}
+} */

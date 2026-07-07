@@ -24,6 +24,7 @@ export interface Project {
   initials: string;
   href: string;
   featured?: boolean;
+  image?: string; // URL/gambar sample project, opsional
 }
 
 export interface Experience {

@@ -3,123 +3,158 @@ import {
   Experience, Testimonial, Stat
 } from '../types';
 
+import acuread from '../images/Cover Acuread.webp';
+import mbege from '../images/Cover MBGE.webp';
+import skincancer from '../images/web ai kanker kulit.webp';
+import vegetable from '../images/web petani.webp';
+import portfolioweb from '../images/web portofolio.webp';
+import highwayescape from '../images/3d game.webp';
+
 export const navLinks: NavLink[] = [
-  { label: 'Tentang', href: '#tentang' },
-  { label: 'Proyek', href: '#proyek' },
-  { label: 'Sertifikat', href: '#sertifikat' },
-  { label: 'Pengalaman', href: '#pengalaman' },
-  { label: 'Kontak', href: '#kontak' },
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#project' },
+  { label: 'Certificates', href: '#certificates' },
+  { label: 'Experience', href: '#experience' },
 ];
 
 export const stats: Stat[] = [
-  { number: '5', suffix: '+', label: 'Tahun Pengalaman' },
-  { number: '40', suffix: '+', label: 'Proyek Selesai' },
-  { number: '25', suffix: '+', label: 'Klien Puas' },
+  { number: '6', suffix: '+', label: 'Projects Completed' },
+  { number: '18', suffix: '+', label: 'Certificates Earned' },
+  { number: '3.44', suffix: '', label: 'GPA' },
 ];
 
 export const skills: Skill[] = [
-  { name: 'React'},
-  { name: 'TypeScript'},
-  { name: 'Flutter'},
+  { name: 'Flutter' },
   { name: 'Dart' },
+  { name: 'JavaScript' },
+  { name: 'Python' },
+  { name: 'PHP' },
   { name: 'HTML' },
   { name: 'CSS' },
-  { name: 'JavaScript' },
-  { name: 'Java' },
-  { name: 'PHP' },           // tambahan
-  { name: 'Python' },
-  { name: 'Laravel' },
-  { name: 'Flask' },
   { name: 'Bootstrap' },
+  { name: 'Tailwind CSS' },
+  { name: 'Flask' },
+  { name: 'FastAPI' },
   { name: 'MySQL' },
   { name: 'MongoDB' },
+  { name: 'SQL' },
   { name: 'Figma' },
   { name: 'Git' },
   { name: 'GitHub' },
+  { name: 'Vercel' },
+  { name: 'Postman' },
+  { name: 'Unity' },
+  { name: 'C#' },
 ];
 
 export const services: Service[] = [
-  { number: '01', icon: '⚛️', title: 'Frontend Development', description: 'Membangun antarmuka yang responsif, cepat, dan accessible menggunakan React, Next.js, dan teknologi modern lainnya.' },
-  { number: '02', icon: '⚙️', title: 'Backend Development', description: 'Membangun API yang scalable dan secure dengan Node.js, Go, dan arsitektur microservices yang teruji.' },
-  { number: '03', icon: '🎨', title: 'UI/UX Design', description: 'Merancang pengalaman pengguna yang intuitif dengan Figma — dari wireframe hingga prototype yang siap dikembangkan.' },
-  { number: '04', icon: '☁️', title: 'Cloud & DevOps', description: 'Deployment dan orkestrasi infrastruktur menggunakan AWS, Docker, dan CI/CD pipeline yang otomatis.' },
-  { number: '05', icon: '📱', title: 'Mobile Development', description: 'Pengembangan aplikasi mobile cross-platform dengan React Native yang terasa native di iOS maupun Android.' },
-  { number: '06', icon: '🔍', title: 'Konsultasi Teknis', description: 'Membantu tim Anda memilih stack teknologi, arsitektur sistem, dan strategi pengembangan yang tepat.' },
+  { number: '01', icon: '🎨', title: 'UI/UX Design', description: 'Designing the interface flow in Figma before moving into code, making sure the final look truly fits user needs.' },
+  { number: '02', icon: '📱', title: 'Mobile Development', description: 'Building cross-platform mobile apps with Flutter & GetX, from interactive UI to API integration.' },
+  { number: '03', icon: '💻', title: 'Web Development', description: 'Developing web applications and REST APIs using Flask, FastAPI, and PHP with MySQL databases.' },
+  { number: '04', icon: '🗄️', title: 'Database Management', description: 'Designing and managing relational and non-relational databases with MySQL and MongoDB.' },
+  { number: '05', icon: '🤖', title: 'AI Integration', description: 'Integrating AI technologies such as Deep Learning (CNN), YOLO, and OCR into web and mobile applications.' },
+  { number: '06', icon: '🕹️', title: 'Game Development', description: 'Designing and developing 3D games with Unity and C#, complete with AI systems and gameplay mechanics.' },
 ];
+
 
 export const projects: Project[] = [
   {
-    title: 'KIRA — Platform Manajemen Keuangan AI',
-    description: 'Platform SaaS yang menggunakan AI untuk menganalisis pola pengeluaran, memprediksi cashflow, dan memberikan rekomendasi finansial personal. Digunakan oleh 12.000+ pengguna aktif.',
+    title: 'AcuRead — Water Utility Information System',
+    description: 'Developed a water utility (PDAM) information system as a full stack developer, covering a REST API backend with Flask, a front-end web app, and mobile apps with Flutter GetX. Features include water meter scanning for field staff, customer management, and billing.',
     tags: [
       { label: 'Featured', color: 'yellow' },
-      { label: 'Next.js', color: 'blue' },
-      { label: 'AI', color: 'purple' },
+      { label: 'Flutter', color: 'blue' },
+      { label: 'Flask', color: 'purple' },
     ],
     bgClass: 'bg-blue',
-    initials: 'KIRA',
+    initials: 'ACU',
     href: '#',
     featured: true,
+    image: acuread,
   },
   {
-    title: 'TaniKita — Marketplace Produk Pertanian',
-    description: 'Aplikasi mobile yang menghubungkan petani langsung dengan konsumen, memotong rantai distribusi dan meningkatkan pendapatan petani hingga 40%.',
+    title: 'Mbege — Nutrition Program Monitoring App',
+    description: 'Sliced UI/UX designs from Figma into interactive Flutter components, with proper state management to keep page-to-page interactions smooth.',
     tags: [
-      { label: 'React Native', color: 'green' },
-      { label: 'Node.js', color: 'blue' },
+      { label: 'Flutter', color: 'green' },
+      { label: 'Figma', color: 'purple' },
     ],
     bgClass: 'bg-green',
-    initials: 'TANI',
+    initials: 'MBG',
     href: '#',
+    image: mbege,
   },
   {
-    title: 'Akar CMS — Headless Content Platform',
-    description: 'CMS headless yang dibangun untuk performa — dengan GraphQL API, real-time preview, dan sistem permission granular untuk tim editorial.',
+    title: 'AI-Based Skin Cancer Detection System',
+    description: 'Built a website for skin cancer detection using a CNN MobileNetV2 deep learning model, covering image preprocessing, model inference, and prediction result display.',
     tags: [
-      { label: 'React', color: 'purple' },
-      { label: 'Go', color: 'red' },
+      { label: 'Python', color: 'blue' },
+      { label: 'AI/CNN', color: 'purple' },
     ],
     bgClass: 'bg-purple',
-    initials: 'AKAR',
+    initials: 'SKD',
     href: '#',
+    image: skincancer,
+  },
+  {
+    title: 'Vegetable Planting Guide Website',
+    description: 'Built a full CRUD web application containing complete guides on how to grow various vegetables, complete with YouTube tutorial videos.',
+    tags: [
+      { label: 'Flask', color: 'blue' },
+      { label: 'MySQL', color: 'green' },
+    ],
+    bgClass: 'bg-green',
+    initials: 'WPS',
+    href: '#',
+    image: vegetable,
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'Designed and developed a responsive portfolio website to showcase profile, skills, and completed projects.',
+    tags: [
+      { label: 'HTML/CSS/JS', color: 'red' },
+    ],
+    bgClass: 'bg-red',
+    initials: 'WEB',
+    href: '#',
+    image: portfolioweb,
+  },
+  {
+    title: 'Highway Escape — 3D Game',
+    description: 'Designed a car-chase racing game, complete with a pursuing police AI system, collision detection, a level system, and integrated 3D assets, animation, and audio.',
+    tags: [
+      { label: 'Unity', color: 'purple' },
+      { label: 'C#', color: 'yellow' },
+    ],
+    bgClass: 'bg-purple',
+    initials: 'HWE',
+    href: '#',
+    image: highwayescape,
   },
 ];
 
 export const experiences: Experience[] = [
-  {
-    period: '2022 — 2024',
-    title: 'Koordinator Divisi Dokumentasi',
-    company: 'RANA 9 — Organisasi Fotografi Kampus',
-    description: 'Memimpin divisi dokumentasi dalam organisasi fotografi kampus RANA 9. Bertanggung jawab atas perencanaan dan pelaksanaan dokumentasi berbagai kegiatan kampus, pengelolaan arsip foto, serta koordinasi anggota tim. Mengembangkan kemampuan fotografi, komposisi visual, dan manajemen tim dalam lingkungan organisasi.',
+    {
+    period: '2024 — 2025',
+    title: 'Documentation Division Member',
+    company: 'RANA 9 — Student Photography Organization',
+    description: 'Handled documentation for various on-campus events. Participated as both committee member and exhibitor in RANA 9\'s annual photography exhibition, displaying photographic work in an official exhibition.',
   },
   {
-    period: '2022 — 2024',
-    title: 'Anggota Aktif',
-    company: 'RANA 9 — Organisasi Fotografi Kampus',
-    description: 'Aktif sebagai fotografer dalam berbagai kegiatan dan event kampus. Terlibat dalam proses editing foto, pemilihan foto terbaik, serta publikasi hasil dokumentasi di media sosial organisasi.',
+    period: '2025 — 2026',
+    title: 'Documentation Division Coordinator',
+    company: 'RANA 9 — Student Photography Organization',
+    description: 'Led the documentation team and coordinated photographers for every event. Responsible for documenting campus events such as PKKMB and managing the organization\'s photo archive.',
+  },
+  {
+    period: '2024',
+    title: 'Freelance Photographer',
+    company: 'Freelance',
+    description: 'Coordinated with clients to understand their desired visual style and branding message. Captured sports moments (tennis) for clients\' social media branding content.',
   },
 ];
 
-export const testimonials: Testimonial[] = [
-  {
-    text: 'Arya bukan hanya developer yang handal — dia juga sangat memahami kebutuhan bisnis. Hasilnya bukan sekadar kode, tapi solusi yang benar-benar memecahkan masalah kami.',
-    name: 'Rizal Hidayat',
-    role: 'CTO, Nobi Digital',
-    initials: 'RH',
-    color: 'accent',
-  },
-  {
-    text: 'Kecepatan dan kualitas kerjanya luar biasa. Dalam waktu 3 bulan, kami berhasil launch produk yang awalnya kami estimasikan butuh 6 bulan. Sangat merekomendasikan!',
-    name: 'Sari Amalia',
-    role: 'Founder, TaniKita',
-    initials: 'SA',
-    color: 'blue',
-  },
-  {
-    text: 'Yang membedakan Arya adalah kemampuannya berkomunikasi. Setiap update jelas, setiap keputusan teknis dijelaskan dengan bahasa yang mudah dimengerti. Kolaborasi yang menyenangkan.',
-    name: 'Budi Winarno',
-    role: 'Product Manager, Tokopedia',
-    initials: 'BW',
-    color: 'purple',
-  },
-];
+// No testimonial data available yet — left empty for now.
+// Add real testimonials here once available (from lecturers, teammates, or freelance clients).
+export const testimonials: Testimonial[] = [];
